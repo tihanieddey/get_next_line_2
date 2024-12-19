@@ -6,7 +6,7 @@
 /*   By: nmohd-ed <nurhidayahtihani@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 12:22:24 by nmohd-ed          #+#    #+#             */
-/*   Updated: 2024/12/06 16:03:11 by nmohd-ed         ###   ########.fr       */
+/*   Updated: 2024/12/19 23:33:17 by nmohd-ed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	*get_next_line(int fd)
 	static char	*buffer[1024];
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, NULL, 0) < 0)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	if (!buffer[fd])
 		buffer[fd] = my_strdup("");
